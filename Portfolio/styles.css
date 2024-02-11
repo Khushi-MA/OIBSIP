@@ -1,0 +1,451 @@
+:root {
+    --col1: #edc7b7;
+    --col2: #eee2dc;
+    --col3: #bab2b5;
+    --col4: #123c69;
+    --col5: #ac3b61;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: Cambria;
+}
+
+::selection {
+    color: var(--col2);
+    background: var(--col5);
+}
+
+/* Code for Firefox  */
+::-moz-selection {
+    color: var(--col2);
+    background: var(--col5);
+}
+
+
+
+body {
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 30px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h3 {
+    font-size: 18px;
+}
+
+section {
+    border: none;
+    padding-bottom: 2rem;
+    /* width: fit-content; */
+    margin: auto;
+
+}
+
+/* -----navigation css -----------------------------------------------------------------------------------------------*/
+
+
+.navigation {
+    overflow: hidden;
+    background-color: var(--col2);
+    padding: 20px 10px;
+}
+
+img {
+
+    /* float: left; */
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    line-height: 25px;
+    border-radius: 4px;
+
+    font-size: 25px;
+    font-weight: bold;
+
+    height: 60px;
+
+    vertical-align: middle;
+}
+
+.navigation a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+
+}
+
+.navigation a.logo {
+    font-size: 25px;
+    font-weight: bold;
+    height: min-content;
+}
+
+.navigation a:hover {
+    /* background-color: var(--col4); */
+    border: 2px solid var(--col5);
+    border-radius: 5px;
+    color: var(--col5);
+    font-weight: bold;
+}
+
+/* .navigation a.active {
+    background-color: dodgerblue;
+    color: white;
+} */
+
+.navigation-right {
+    float: right;
+}
+
+@media screen and (max-width: 600px) {
+    .navigation a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .navigation-right {
+        float: none;
+    }
+}
+
+body {
+    background-color: var(--col1);
+    /* background-color: #ac3b61; */
+}
+
+/* -----intro card css -----------------------------------------------------------------------------------------------*/
+.myphoto {
+    display: grid;
+    /* padding: 2rem; */
+    grid-template-columns: 300px 1fr;
+    gap: 1rem;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    font: 500 100%/1.5 system-ui;
+
+    border-radius: 10px;
+}
+
+.headerimg {
+    max-width: 120%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.myphotobody {
+    background: #eee2dc90;
+    /* border: 1px solid black; */
+    padding: 1rem;
+
+    border-radius: 10px;
+
+}
+
+@media (max-width: 650px) {
+    .myphoto {
+        display: block;
+        font-size: 80%;
+        margin: auto;
+
+
+    }
+
+    .myphotobody {
+        position: relative;
+        margin: -3rem 0 2rem 1rem;
+        margin: auto;
+        margin-top: -3rem;
+
+
+        padding: 1rem;
+        /* background: rgba(255, 255, 255, 0.8); */
+        background: #eee2dc90;
+        /* border: 1px solid black; */
+        border-radius: 10px;
+
+    }
+}
+
+/* ------------icons---------------------------------------------------------------------------------------------------------------------- */
+.iconsec {
+    width: fit-content;
+    margin: auto;
+}
+
+.fa {
+    padding: 10px;
+    /* padding-right: 30px; */
+    font-size: 20px;
+    width: fit-content;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 5px;
+
+    border-radius: 10px;
+
+    background: var(--col5);
+    color: var(--col2);
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+/* -skills card css-------------------------------------------------------------------------------------------------------- */
+.skillcardcolumn {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+}
+
+
+.skillcard {
+
+    padding: 16px;
+
+    /* width: calc(50% - 20px); */
+    width: 50%;
+    height: fit-content;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 650px) {
+    .skillcard {
+        width: 100%;
+        margin-right: 0;
+    }
+}
+/* skills bar css --------------------------------------------------------------------------------------------------*/
+
+.skillssection {
+    margin: auto;
+
+    h3 {
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
+    td {
+        padding-left: 30px;
+        padding-right: 30px;
+
+        padding-top: 0%;
+    }
+}
+
+.skillslabel {
+    color: var(--col2);
+    margin-bottom: -23px;
+    margin-left: 5px;
+}
+
+.skillcontainer {
+    /* width: 100%; */
+    max-width: 100%;
+    min-width: 300px;
+    background-color: var(--col2);
+}
+
+.skills {
+    text-align: right;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: var(--col2);
+    background-color: #123c69;
+    padding-right: 5px;
+}
+
+.cprog {
+    width: 90%;
+}
+
+.cplusplus {
+    width: 80%;
+}
+
+.python {
+    width: 65%;
+}
+
+.html {
+    width: 60%;
+}
+
+.listen {
+    width: 80%;
+}
+
+.leader {
+    width: 80%;
+}
+
+.manage {
+    width: 70%;
+}
+
+.write {
+    width: 60%;
+}
+
+/* -----------timeline css-------------------------------------------------------------------------------------- */
+.timeline {
+    /* width: 800px; */
+    width: fit-content;
+    /* background-color: var(--col5); */
+    color: black;
+    /* color: var(--col2); */
+    /* padding: 30px 20px; */
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    /* box-shadow: 0px 0px 10px rgba(0, 0, 0, .5); */
+}
+
+.timeline ul {
+    list-style-type: none;
+    border-left: 2px solid var(--col4);
+    padding: 0px 5px;
+}
+
+.timeline ul li {
+    padding: 20px 10px;
+    position: relative;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.timeline ul li span {
+    display: inline-block;
+    /* background-color: var(--col4); */
+    /* color: var(--col2); */
+    border-radius: 25px;
+    padding: 2px 7px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.timeline ul li .tlcontent h3 {
+    /* color: var(--col4); */
+    font-size: 18px;
+    font-weight: bold;
+    /* text-decoration: double; */
+    /* padding-top: 5px; */
+}
+
+.timeline ul li .tlcontent p {
+    /* padding: 5px 0px 15px 0px; */
+    font-size: 15px;
+}
+
+.timeline ul li:before {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: var(--col5);
+    border-radius: 50%;
+    left: -11px;
+    top: 28px;
+    transition: .5s;
+}
+
+.timeline ul li:hover {
+    background-color: #ac3b6180;
+}
+
+.timeline ul li:hover:before {
+    background-color: var(--col5);
+    box-shadow: 0px 0px 10px 2px var(--col5);
+}
+
+@media (max-width:300px) {
+    .timeline {
+        width: 100%;
+        /* padding: 30px 5px 30px 10px; */
+    }
+
+    .timeline ul li .tlcontent h3 {
+        color: var(--col5);
+        font-size: 15px;
+    }
+
+}
+
+/* ------projects css-------------------------------------------------------------------------------------------- */
+
+/* Float four columns side by side */
+.projcolumn {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.projrow {
+    margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.projrow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 800px) {
+    .projcolumn {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+/* Style the counter cards */
+.projcard {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: var(--col2);
+
+    height: fit-content;
+    text-align: justify;
+
+    margin-top: 20px;
+    margin-left: 5px;
+    margin-left: 5px;
+
+    img {
+        width: 100%;
+        height: auto;
+
+        padding: 0%;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+}

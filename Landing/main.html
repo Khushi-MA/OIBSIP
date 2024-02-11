@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Khushi - That's me</title>
+    <!-- favicon -->
+    <link rel="icon" href="assets/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css">
+
+    
+
+
+    <script>
+        //    ===========================================================================================================================================
+
+        // smooth scrolling
+        $("#sec-1").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#one").offset().top - 66
+            }, 1000);
+            return false;
+        });
+
+        $("#sec-2").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#two").offset().top - 112
+            }, 1000);
+            return false;
+        });
+
+        $("#sec-3").click(function () {
+            $(' html,body').animate({
+                scrollTop: $("#three").offset().top - 112
+            }, 1000);
+            return false;
+        });
+
+        $("#sec-4").click(function () {
+            $(this).addClass("active");
+            $('html,body ').animate({
+                scrollTop: $("#four").offset().top - 112
+            }, 1000);
+            return false;
+        });
+
+
+        //    ===========================================================================================================================================
+        $('#two').waypoint(function () {
+
+            $(".container ul li").children().removeClass("active");
+            $("#sec-2").addClass("active");
+
+        }, { offset: 101 });
+
+
+        $('#three').waypoint(function () {
+            $(".container ul li").children().removeClass("active");
+            $("#sec-3").addClass("active");
+        }, { offset: 101 });
+
+        $('#four').waypoint(function () {
+            $(".container ul li").children().removeClass("active");
+            $("#sec-4").addClass("active");
+        }, { offset: 101 });
+
+        $('#one').waypoint(function () {
+            $(".container ul li").children().removeClass("active");
+            $("#sec-1").addClass("active");
+        }, { offset: 0 });
+
+
+    </script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav_container">
+            <ul>
+                <li><a id="sec-1" href="#one">Hi!</a></li>
+                <li><a id="sec-2" href="#two">Paranormal Perspectives</a></li>
+                <li><a id="sec-3" href="#three">Individual Reflections</a></li>
+                <!-- <li><a id="sec-4" href="#four">Contact</a></li> -->
+            </ul>
+        </div>
+    </nav>
+
+    <script>
+        const rotatingElement = document.getElementById('rotatingElement');
+
+        document.addEventListener('mousemove', (e) => {
+            const { clientX, clientY } = e;
+
+            // Calculate rotation angles based on cursor position
+            const rotateX = (clientY / window.innerHeight) * 180 - 90;
+            const rotateY = (clientX / window.innerWidth) * 360 - 180;
+
+            // Update custom properties
+            rotatingElement.style.setProperty('--rotateX', `${rotateX}deg`);
+            rotatingElement.style.setProperty('--rotateY', `${rotateY}deg`);
+        });
+    </script>
+    <!--.............................header................................................................ -->
+
+    <!-- <div id="one" class="header">
+        <img src="assets/headerphoto.jpg" alt="photo 1">
+        <h2 id="rotatingElement">Khushi's blog</h2>
+        <p class="subheading">A place to share your thoughts and experiences</p>
+    </div> -->
+    <div id="one" class="header">
+        <img src="assets/headerphoto.jpg" alt="photo 1">
+        <h2 id="#headingtext" style="padding-top: 30px;"">Khushi's blog</h2>
+        <p class="subheading">A place to share your thoughts and experiences</p>
+    </div>
+<!--............................................................................................ -->
+<!--............................................................................................ -->
+<!--............................................................................................ -->
+ 
+<h2 id="two" class="sectiondiv">
+    Panorama of Perspectives
+</h2>
+<!-- .......................column starts.......................................................................................... -->
+    <div class="cardcolumn">
+
+               <!--...........................................1...1............................................... -->
+
+               <div class="card">
+                <h2>NRLP Project</h2>
+                <h5>Article 1, January 2024</h5>
+                <img src="assets/card4.png" alt="photo 3">
+                <p>The interlinking of river project is a Civil Engineering project, 
+                    which aims to connect Indian rivers through reservoirs and canals...
+                    <br><a href="./pages/page101.html" class="smooth-link">read more</a>
+                </p>
+            </div>
+    <!--...........................................1..2............................................... -->
+    <div class="card">
+        <h2>Delightful "10 cups"</h2>
+        <h5>Recipie 1, January 2024</h5>
+        <img src="assets/card3.png" alt="photo 3">
+        <p>That's because these cookies are make from 10 cups of 4 different ingredients.
+            <br>My mummy made these ಬೆಣ್ಣೆ ಬಿಕ್ಕೀಟು...
+            <br> <a href="./pages/page102.html" class="smooth-link">read more</a>
+        </p>
+    </div>
+    <!--...........................................1..3............................................... -->
+    <div class="card">
+        <h2>Nature's Fury</h2>
+        <h5>Article 2, January 2024</h5>
+        <img src="assets/card5.jpg" alt="photo 3">
+        <p>Living Nature nurtures all leaving organisms on the earth by providing food. living Nature has 
+            arranged a leaving haven that is conducive...
+            <br> <a href="./pages/page103.html" class="smooth-link">read more</a>
+        </p>
+    </div>
+
+    <!--...........................................1..4............................................... -->
+    <div class="card">
+        <h2>Importance of Sports and Games</h2>
+        <h5>Article 3, January 2024</h5>
+        <img src="assets/card104.jpg" alt="photo 3">
+        <p>There goes a good proverbs- <strong>"All work and no play makes Jack a dull boy"</strong> and 
+            <strong>"A sound mind is in a sound body"</strong>...
+            <br> <a href="./pages/page104.html" class="smooth-link">read more</a>
+        </p>
+    </div>
+
+    <!--...........................................1..5............................................... -->
+    <div class="card">
+        <h2>ENVIRONMENT- ROLE OF STUDENT  </h2>
+        <h5>Article 4, January 2024</h5>
+        <img src="assets/card105.jpg" alt="photo 3">
+        <p>Living Nature nurtures all leaving organisms on the earth by providing food. living Nature has 
+            arranged a leaving haven that is conducive...
+            <br> <a href="./pages/page105.html" class="smooth-link">read more</a>
+        </p>
+    </div>
+
+    <!--...........................................1..6............................................... -->
+    <div class="card">
+        <h2>How you know it's good?</h2>
+        <h5>Story 1, January 2024</h5>
+        <img src="assets/card106.jpg" alt="photo 3">
+        <p>Living Nature nurtures all leaving organisms on the earth by providing food. living Nature has 
+            arranged a leaving haven that is conducive...
+            <br> <a href="./pages/page106.html" class="smooth-link">read more</a>
+        </p>
+    </div>
+
+<!--..........................................column end.................................................. -->
+</div>
+
+<!--............................................................................................ -->
+<!--............................................................................................ -->
+<h2 id="three" class="sectiondiv">
+    Individual Reflections
+
+</h2>
+<!--............................................................................................ -->
+<div class="cardcolumn">
+<!--......................................2....1................................................... -->
+<div class="card">
+    <h2>After all this time?</h2>
+    <h5>Spells of potterhead, December 2020</h5>
+    <img src="assets/card1.jpg" alt="photo 1">
+    <p>“Have you grown to care for the boy, after all?”
+        <br>“For him?”<br>
+        “Expecto Patronum!”... <br>
+        <a href="./pages/page201.html" class="smooth-link">read more</a>
+    </p>
+</div>
+
+        <!--.........................................2....2.............................................. -->
+        <div class="card">
+            <h2>The Sun ig?</h2>
+            <h5>Crushed 1, January 2024</h5>
+            <img src="assets/card2.jpg" alt="photo 1">
+            <p>That twinkle in your eyes when you talk about something you love
+                Is greater than the shine in the stars up above... <br>
+                <a href="./pages/page202.html" class="smooth-link">read more</a>
+            </p>
+        </div>
+
+        <!--.........................................2....3.............................................. -->
+        
+        <!--.........................................2....4.............................................. -->
+        
+        <!--.........................................2....5.............................................. -->
+        
+        <!--.........................................2....6.............................................. -->
+
+
+
+    </div>
+
+    <!-- <div id="four" class="footer">
+        <h2>Footer</h2>
+    </div> -->
+
+</body>
+
+</html>

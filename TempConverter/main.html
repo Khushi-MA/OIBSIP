@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1 style="font-size: larger;">Temperature Converter</h1>
+    <form name="Calc" style="width: fit-content; margin: auto;">
+        <table>
+            <tr>
+                <td style="width: 100px;">
+                    <section>
+                        <label><input type="number" id="ininumber" class="number-field" name="ininumber"></label>
+                    </section>
+                </td>
+                <td style="width: 100px;">
+                    <section>
+                        <label for="fromtype"></label>
+                        <select name="fromtype" id="fromtype" onchange="updateOptions()">
+                            <option value="C">&#176;C - Celsius</option>
+                            <option value="F">&#176;F - Fahrenheit</option>
+                            <option value="K">K - Kelvin</option>
+                        </select>
+                    </section>
+                </td>
+                <td style="width: 100px;">
+                    <section>
+                        <input type="button" value="=" onclick="convertTemperature()" />
+                    </section>
+                </td>
+                <td style="width: 100px;">
+                    <section>
+                        <label name="resultNumber" id="resultNumber">___</label>
+                    </section>
+                </td>
+                <td style="width: 100px;">
+                    <section>
+                        <label for="totype"></label>
+                        <select name="totype" id="totype" onchange="updateOptions()">
+                            <option value="F">&#176;F - Fahrenheit</option>
+                            <option value="K">K - Kelvin</option>
+                            <option value="C">&#176;C - Celsius</option>
+                        </select>
+                    </section>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <script>
+        function convertTemperature() {
+            let initialNumber = parseFloat(document.getElementById('ininumber').value);
+    
+            // If no number is entered, default to 0
+            if (isNaN(initialNumber)) {
+                initialNumber = 0;
+            }
+    
+            let resultNumber = document.getElementById('resultNumber');
+            let fromType = document.getElementById('fromtype').value;
+            let toType = document.getElementById('totype').value;
+    
+            let convertedNumber;
+    
+            switch (fromType) {
+                case 'C':
+                    switch (toType) {
+                        case 'F':
+                            convertedNumber = (initialNumber * 9 / 5) + 32;
+                            break;
+                        case 'K':
+                            convertedNumber = initialNumber + 273.15;
+                            break;
+                    }
+                    break;
+                case 'F':
+                    switch (toType) {
+                        case 'C':
+                            convertedNumber = (initialNumber - 32) * 5 / 9;
+                            break;
+                        case 'K':
+                            convertedNumber = (initialNumber - 32) * 5 / 9 + 273.15;
+                            break;
+                    }
+                    break;
+                case 'K':
+                    switch (toType) {
+                        case 'C':
+                            convertedNumber = initialNumber - 273.15;
+                            break;
+                        case 'F':
+                            convertedNumber = (initialNumber - 273.15) * 9 / 5 + 32;
+                            break;
+                    }
+                    break;
+            }
+    
+            resultNumber.innerText = Math.round(convertedNumber * 100) / 100;
+        }
+    
+        function updateOptions() {
+            const fromType = document.getElementById("fromtype");
+            const toType = document.getElementById("totype");
+            const selectedValue = fromType.value;
+    
+            for (let i = 0; i < toType.options.length; i++) {
+                toType.options[i].disabled = false; // Enable all options initially
+                if (toType.options[i].value === selectedValue) {
+                    toType.options[i].disabled = true; // Disable the matching option
+                }
+            }
+    
+            // Repeat the process for the "fromtype" select element
+            for (let i = 0; i < fromType.options.length; i++) {
+                fromType.options[i].disabled = false;
+                if (fromType.options[i].value === toType.value) {
+                    fromType.options[i].disabled = true;
+                }
+            }
+        }
+    </script>
+    
+</body>
+
+</html>

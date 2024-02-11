@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        :root {
+            font-size: 20px;
+        }
+
+        *,
+        *:before,
+        *:after {
+            box-sizing: border-box;
+        }
+
+        p {
+            margin: 0;
+            text-align: justify;
+        }
+
+        p:not(:last-child) {
+            margin-bottom: 1.5em;
+        }
+
+        h1 {
+            margin: 0;
+            text-decoration: underline;
+
+        }
+
+        body {
+            font: 1em/1.618 Inter, Cambria;
+            font-family: Cambria;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            min-height: 100vh;
+            padding: 30px;
+            margin: 0;
+
+            color: rgb(255, 255, 255);
+            background:
+                /* url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) */
+                /* url(https://unsplash.com/photos/pink-and-blue-light-illustration-tHtZo3FLhPc) */
+                url('../assets/page106.jpg') center / cover no-repeat fixed;
+        }
+
+        .card {
+            max-width: 300px;
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            max-width: 80%;
+            height: fit-content;
+            padding: 35px;
+
+            border: 1px solid rgba(255, 255, 255, 0.111);
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.173);
+            box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+
+            backdrop-filter: blur(10px);
+
+            animation: fadeIn 0.5s ease-in-out forwards;
+
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .card-footer {
+            font-size: 0.65em;
+            color: #446;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card">
+    <h1>
+        Good? Bad? Who knows!
+    </h1>
+<p>
+    Once upon a time, a king, when he was out hunting, injured his finger. His doctor, who always accompanied him on a hunt, put the bandage on the wound. "Is it going to be all right?" the King asked the doctor. The doctor replied, "Good? Bad? Who knows?"
+<br>
+<br>   By the time he got back from the hunt, the wound had become infected. The doctor carefully cleaned the wound, put some ointment, and bandaged it again. "Are you sure it’s going to be alright?" asked the King. "Good? Bad? Who knows?" said the doctor. A few days later, the finger became so infected that they had to amputate it. The king was furious with the doctor. "See how you like being in the dungeon, doctor." The doctor said, "Prison, sire, good? Bad? Who knows?" The King told him, "You are insane as well as incompetent."
+<br>   
+<br>   A few weeks later, the king went out hunting again, but this time he got lost and was captured by indigenous forest people. It was their holy day, and they needed a sacrifice for their gods. They tied the king to a tree and started dancing and chanting around him. Just as they were about to slit his throat, the priest yelled or shouted, "Stop! This man cannot be our sacrifice. He is not perfect; he has only got nine fingers!" And so they set him free.
+<br>   
+<br>   The King went straight to the dungeon the moment he got back to the palace, and he apologized profusely to the doctor. "You were right," he said, "losing my finger was good? You saved my life. I am so sorry it was bad? of me to have put you in this dungeon." The doctor said, "Bad? No, It was very good that you locked me here; otherwise, I would have been with you on the hunt and I have all my ten fingers."
+    
+</p>
+    </div>
+    </body>
+
+</html>

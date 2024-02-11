@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NavBar Try</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        a {
+            margin: 0;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        nav {
+            top: 0%;
+            width: 100%;
+            position: fixed;
+            background-color: #007bce;
+        }
+
+        .container {
+            padding: 22px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .container ul li {
+            list-style: none;
+            margin: 0 10px;
+            display: inline-block;
+        }
+
+        .container ul li a:hover {
+            padding: 12px;
+            color: #fc0;
+        }
+
+        .container ul li a {
+            margin: 8px;
+            padding: 10px;
+            color: #fff;
+            font-size: 1.2em;
+            text-decoration: none;
+            transition: all 0.3s ease-out;
+        }
+
+        .active {
+            border-bottom: 2px solid #d0d7d9;
+        }
+
+        .container p {
+            margin-bottom: 16px;
+            color: #fc0;
+            font-weight: 700;
+            font-size: 20px;
+        }
+
+        .item {
+            width: 100%;
+            padding: 50px;
+            height: 280px;
+            text-align: center;
+            background-color: #ecf0f1;
+            border-bottom: 1px solid #ccc;
+
+        }
+
+        .first {
+            margin-top: 100px;
+        }
+
+        .default {
+            margin-top: 64px;
+        }
+
+        .col-full {
+            width: 1044px;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script>
+        //    ===========================================================================================================================================
+
+        // smooth scrolling
+        $("#sec-1").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#one").offset().top - 66
+            }, 1000);
+            return false;
+        });
+
+        $("#sec-2").click(function () {
+            $('html, body').animate({
+                scrollTop: $("#two").offset().top - 112
+            }, 1000);
+            return false;
+        });
+
+        $("#sec-3").click(function () {
+            $(' html,body').animate({
+                scrollTop: $("#three").offset().top - 112
+            }, 1000);
+            return false;
+        });
+
+        $("#sec-4").click(function () {
+            $(this).addClass("active");
+            $('html,body ').animate({
+                scrollTop: $("#four").offset().top - 112
+            }, 1000);
+            return false;
+        });
+
+
+        //    ===========================================================================================================================================
+        $('#two').waypoint(function () {
+
+            $(".container ul li").children().removeClass("active");
+            $("#sec-2").addClass("active");
+
+        }, { offset: 101 });
+
+
+        $('#three').waypoint(function () {
+            $(".container ul li").children().removeClass("active");
+            $("#sec-3").addClass("active");
+        }, { offset: 101 });
+
+        $('#four').waypoint(function () {
+            $(".container ul li").children().removeClass("active");
+            $("#sec-4").addClass("active");
+        }, { offset: 101 });
+
+        $('#one').waypoint(function () {
+            $(".container ul li").children().removeClass("active");
+            $("#sec-1").addClass("active");
+        }, { offset: 0 });
+
+
+    </script>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <p>Scroll down please</p>
+            <ul>
+                <li><a id="sec-1" href="#one">HTML</a></li>
+                <li><a id="sec-2" href="#two">CSS</a></li>
+                <li><a id="sec-3" href="#three">Javascript</a></li>
+                <li><a id="sec-4" href="#four">jQuery</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="one" class="default first item">
+        <h2>HTML</h2>
+        <p>Lorem ipsulm dolor sit amet rem adipisci delectus? consectetur adipisicing elit. Ipsam cum, voluptate vero,
+            blanditiis voluptatum aut consectetur et in quam rem adipisci delectus enim quod a laudantium perferendis ad
+            possimus culpa?</p>
+    </div>
+    <div id="two" class="item">
+        <h2>CSS3</h2>
+        <p>Lorem ipsulm dolor sit amet rem adipisci delectus? consectetur adipisicing elit. Ipsam cum, voluptate vero,
+            blanditiis voluptatum aut consectetur et in quam rem adipisci delectus enim quod a laudantium perferendis ad
+            possimus culpa?</p>
+    </div>
+    <div id="three" class="item">
+        <h2>Javascript</h2>
+        <p>Lorem ipsulm dolor sit amet rem adipisci delectus? consectetur adipisicing elit. Ipsam cum, voluptate vero,
+            blanditiis voluptatum aut consectetur et in quam rem adipisci delectus enim quod a laudantium perferendis ad
+            possimus culpa?</p>
+    </div>
+    <div id="four" class="item">
+        <h2>jQuery</h2>
+        <p>Lorem ipsulm dolor sit amet rem adipisci delectus? consectetur adipisicing elit. Ipsam cum, voluptate vero,
+            blanditiis voluptatum aut consectetur et in quam rem adipisci delectus enim quod a laudantium perferendis ad
+            possimus culpa?</p>
+    </div>
+    <footer>
+        <h2>Thank You!</h2>
+        <h4>For Visiting</h4>
+    </footer>
+    <a id="to_Top" href="#one">
+        <div class="to-Top"></div>
+    </a>
+    <a id="to_Top" href="#one">
+        <div class="to-Top"></div>
+    </a>
+
+
+
+
+</body>
+
+</html>
